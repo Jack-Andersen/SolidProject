@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Elder\\Documents\\GitHub\\SolidProductProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj": {}
+    "C:\\Users\\Elder\\Documents\\GitHub\\SolidProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Elder\\Documents\\GitHub\\SolidProductProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj": {
+    "C:\\Users\\Elder\\Documents\\GitHub\\SolidProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProductProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj",
+        "projectUniqueName": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj",
         "projectName": "SolidProductApi",
-        "projectPath": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProductProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj",
+        "projectPath": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj",
         "packagesPath": "C:\\Users\\Elder\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProductProject\\SolidPrinciples\\SolidProductApi\\obj\\",
+        "outputPath": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProject\\SolidPrinciples\\SolidProductApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xtnV04ougcFV60WYeZ4wISt+HUtREZfRtBmde0K5oTSFiykxZmfXoUgk5V+FXH9FV3h0TA74at8Nk0GsoRW58A==",
+  "dgSpecHash": "eAhikia7c94d0B0sXmcMPnQsHpqQkOvf1MDzqV9VQJjj+sri+/OXf7Lgh30xZH8qU+o8eWHnuTmMYOw0lshxmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProductProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj",
+  "projectFilePath": "C:\\Users\\Elder\\Documents\\GitHub\\SolidProject\\SolidPrinciples\\SolidProductApi\\SolidProductApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Elder\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Elder\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",

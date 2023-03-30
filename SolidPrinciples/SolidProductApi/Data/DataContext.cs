@@ -9,5 +9,6 @@ namespace SolidProductApi.Data
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Keyboard> Keyboards { get; set; }
     }
 }

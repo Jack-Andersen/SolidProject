@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 
 // Add services
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IKeyboardService, KeyboardService>();
 
 builder.Services.AddSqlite<DataContext>("Data Source=SolidProject.db");
 
