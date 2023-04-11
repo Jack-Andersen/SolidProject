@@ -6,82 +6,79 @@ using SolidProductApi.Services.ProductServices;
 
 namespace SolidProductApi.Controllers
 {
-    namespace SolidProductApi.Controllers
+    [Route("api/[controller]")]
+    [ApiController]
+    public class KeyboardController : ControllerBase
     {
-        [Route("api/[controller]")]
-        [ApiController]
-        public class KeyboardController : ControllerBase
+        private readonly IKeyboardService _keyboardService;
+
+        public KeyboardController(IKeyboardService keyboardService)
         {
-            private readonly IKeyboardService _keyboardService;
+            _keyboardService = keyboardService;
+        }
 
-            public KeyboardController(IKeyboardService keyboardService)
+        [HttpGet]
+        public async Task<ActionResult<ServiceResponse<List<Keyboard>>>> GetKeyboard()
+        {
+            var keyboards = await _keyboardService.GetKeyboardAsync();
+
+            var response = new ServiceResponse<List<Keyboard>>
             {
-                _keyboardService = keyboardService;
-            }
+                Data = keyboards.Data
+            };
 
-            [HttpGet]
-            public async Task<ActionResult<ServiceResponse<List<Keyboard>>>> GetKeyboard()
+            return Ok(response.Data);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult<ServiceResponse<Keyboard>>> GetKeyboard([FromRoute] Guid id)
+        {
+            var keyboard = await _keyboardService.GetKeyboardAsync(id);
+
+            var response = new ServiceResponse<Keyboard>
             {
-                var keyboards = await _keyboardService.GetKeyboardAsync();
+                Data = keyboard.Data
+            };
 
-                var response = new ServiceResponse<List<Keyboard>>
-                {
-                    Data = keyboards.Data
-                };
+            return Ok(response.Data);
+        }
 
-                return Ok(response.Data);
-            }
+        [HttpPost]
+        public async Task<ActionResult<ServiceResponse<Keyboard>>> AddKeyboard(Keyboard keyboard)
+        {
+            await _keyboardService.AddKeyboardAsync(keyboard);
 
-            [HttpGet]
-            [Route("{id}")]
-            public async Task<ActionResult<ServiceResponse<Keyboard>>> GetKeyboard([FromRoute] Guid id)
+            var response = new ServiceResponse<Keyboard>
             {
-                var keyboard = await _keyboardService.GetKeyboardAsync(id);
+                Data = keyboard
+            };
 
-                var response = new ServiceResponse<Keyboard>
-                {
-                    Data = keyboard.Data
-                };
+            return Ok(response);
+        }
 
-                return Ok(response.Data);
-            }
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponse<Keyboard>>> EditKeyboard(Keyboard keyboard)
+        {
+            await _keyboardService.EditKeyboardAsync(keyboard);
 
-            [HttpPost]
-            public async Task<ActionResult<ServiceResponse<Keyboard>>> AddKeyboard(Keyboard keyboard)
+            var response = new ServiceResponse<Keyboard>
             {
-                await _keyboardService.AddKeyboardAsync(keyboard);
+                Data = keyboard
+            };
 
-                var response = new ServiceResponse<Keyboard>
-                {
-                    Data = keyboard
-                };
+            return Ok(response);
+        }
 
-                return Ok(response);
-            }
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<ActionResult<ServiceResponse<Keyboard>>> DeleteKeyboard([FromRoute] Guid id)
+        {
+            await _keyboardService.DeleteKeyboardAsync(id);
 
-            [HttpPut]
-            public async Task<ActionResult<ServiceResponse<Keyboard>>> EditKeyboard(Keyboard keyboard)
-            {
-                await _keyboardService.EditKeyboardAsync(keyboard);
+            var response = new ServiceResponse<Keyboard>();
 
-                var response = new ServiceResponse<Keyboard>
-                {
-                    Data = keyboard
-                };
-
-                return Ok(response);
-            }
-
-            [HttpDelete]
-            [Route("{id}")]
-            public async Task<ActionResult<ServiceResponse<Keyboard>>> DeleteKeyboard([FromRoute] Guid id)
-            {
-                await _keyboardService.DeleteKeyboardAsync(id);
-
-                var response = new ServiceResponse<Keyboard>();
-
-                return Ok(response);
-            }
+            return Ok(response);
         }
     }
 }
